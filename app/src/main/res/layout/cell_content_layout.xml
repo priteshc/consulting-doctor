@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <!-- content header line -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bgContentTop"
+        android:paddingBottom="7dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="7dp"
+
+        >
+
+       <!-- <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/order_id_mock"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="@string/price_mock"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />-->
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/menu_icon" />
+
+    </RelativeLayout>
+
+    <!-- content header image -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:id="@+id/head_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/rszpoliclinic"
+             />
+
+        <TextView
+            android:id="@+id/head_image_left_text"
+            style="@style/ContentImageBadgeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/head_image"
+            android:layout_alignLeft="@id/head_image"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:visibility="gone"
+            />
+
+        <TextView
+            style="@style/ContentImageBadgeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/head_image_left_text"
+            android:layout_alignLeft="@id/head_image_left_text"
+            android:paddingLeft="20dp"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/head_image_right_text"
+            style="@style/ContentImageBadgeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/head_image"
+            android:layout_alignRight="@id/head_image"
+            android:paddingBottom="10dp"
+            android:paddingRight="20dp"
+            android:visibility="gone"
+            />
+
+        <TextView
+            style="@style/ContentImageBadgeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/head_image_right_text"
+            android:layout_alignLeft="@id/head_image_right_text"
+             />
+
+        <TextView
+            android:id="@+id/head_image_center_text"
+            style="@style/ContentImageBadgeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/head_image"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="10dp"
+            android:visibility="gone"
+            />
+
+        <TextView
+            style="@style/ContentImageBadgeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/head_image_center_text"
+            android:layout_alignLeft="@id/head_image_center_text"
+             />
+
+
+    </RelativeLayout>
+
+    <!-- content body layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bgContent"
+        android:orientation="vertical"
+        android:paddingBottom="6dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="9dp">
+
+        <!-- avatar and name part -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="vertical"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/doctor"
+                    app:border_color="#FF000000"
+                    android:layout_marginTop="10dp"
+
+                    />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:text="View Profile"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/white"
+                        android:layout_gravity="bottom"
+                        android:background="#58ad26"
+                        android:id="@+id/view"
+
+                        />
+
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/bgTitleRight"
+                android:paddingBottom="5dp"
+                android:paddingRight="5dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:id="@+id/re1"
+                >
+
+
+
+            <TextView
+                android:id="@+id/title_from_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ellipsize="marquee"
+                android:fadingEdge="horizontal"
+                android:text="Dr. Rahul Ghule"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:layout_marginLeft="20dp"
+                />
+
+
+
+            <TextView
+                android:id="@+id/title_to_address11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title_from_address"
+                android:ellipsize="marquee"
+                android:fadingEdge="horizontal"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:text="(MD,DM-Cardiology)"
+                android:layout_marginTop="1dp"
+                android:layout_marginLeft="20dp"
+
+                />
+
+
+
+                <TextView
+                    android:id="@+id/title_to_address1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title_to_address11"
+                    android:ellipsize="marquee"
+                    android:fadingEdge="horizontal"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:text="10 years experience as Cardiologist"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="20dp"
+
+                    />
+
+
+                <TextView
+                    android:id="@+id/title_to_address2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title_to_address1"
+                    android:ellipsize="marquee"
+                    android:fadingEdge="horizontal"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:text="Dr.Rahul is the qualified Cardiologist and Practioes at Smart Hospital "
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="20dp"
+
+                    />
+
+
+
+
+             </RelativeLayout>
+
+        </LinearLayout>
+
+        <!-- divider line -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="9dp"
+            android:src="@color/contentDividerLine" />
+
+        <!-- addresses part -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:src="@drawable/home"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Smart Hospital"
+                android:textColor="@android:color/black"
+                android:gravity="center_vertical"
+                android:layout_gravity="center"
+
+                />
+
+        </LinearLayout>
+
+        <!-- divider line -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="7dp"
+            android:src="@color/contentDividerLine" />
+
+        <!-- dates part -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:src="@drawable/location"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Mumbai Central"
+                android:textColor="@android:color/black"
+                android:gravity="center_vertical"
+                android:layout_gravity="center"
+
+                />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="7dp"
+            android:src="@color/contentDividerLine" />
+
+        <!-- dates part -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:src="@drawable/call"
+                android:id="@+id/call"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="022-1234568"
+                android:textColor="@android:color/black"
+                android:gravity="center_vertical"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
+
+
+
+        <!-- request button -->
+
+
+        <com.brouding.blockbutton.BlockButton
+            app:pushDepthDp="2"
+            app:buttonColor="#58ad26"
+            app:buttonGapColor="@color/contentBadgeTitle"
+            app:buttonDisabledColor="#999999"
+            app:buttonDisabledGapColor="@color/bgContentTop"
+            android:id="@+id/btn_reset_guide"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:textSize="17dp"
+                android:textAlignment="center"
+                android:text="Book Appointment" />
+
+        </com.brouding.blockbutton.BlockButton>
+
+
+        <TextView
+            android:id="@+id/content_request_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:background="@color/btnRequest"
+            android:padding="10dp"
+            android:text="Book Appointment"
+            android:textAlignment="center"
+            android:textColor="@color/bgContent"
+            android:textSize="20sp"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textAlignment="center"
+            android:textColor="@color/contentBadgeTitle"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

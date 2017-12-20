@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="OTP"
+            android:textSize="23dp"
+            android:textColor="@color/white"
+            />
+
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?actionBarSize"
+        android:focusableInTouchMode="true"
+        >
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sit back &amp; Relax! While we verify your \n mobile number"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/carbon_black"
+            android:id="@+id/txt"
+            android:textSize="16dp" />
+
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="(Enter the OTP below in case if we fail to detect the \n SMS automatically)"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textSize="13dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/txt"
+            android:textColor="@color/carbon_black" />
+
+
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:id="@+id/otp"
+            android:layout_marginTop="3dp"
+            android:layout_below="@+id/phn"
+            android:layout_centerInParent="true"
+            android:hint="otp"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:maxLength="6"
+            android:gravity="center"
+
+            android:background="@drawable/edittextbg" >
+
+            </EditText>
+
+
+        <cn.iwgang.countdownview.CountdownView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tim"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            app:isHideTimeBackground="true"
+            app:isShowMinute="true"
+            android:layout_below="@+id/otp"
+            app:isShowSecond="true"
+            app:timeTextColor="#000000"
+            app:timeTextSize="22sp"
+            app:isTimeTextBold="true"
+            app:suffixGravity="center"
+            app:suffixTextColor="#000000"
+            app:suffixTextSize="12sp"
+
+            />
+
+        <EditText
+            android:layout_width="230dp"
+            android:layout_height="50dp"
+            android:id="@+id/phn"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:layout_below="@+id/tv2"
+            android:maxLength="10"
+            android:layout_marginTop="20dp"
+            android:hint="mobile no"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:background="@drawable/edittextbg" />
+
+
+        <com.brouding.blockbutton.BlockButton
+            app:pushDepthDp="2"
+            app:buttonColor="#58ad26"
+            app:buttonGapColor="@color/contentBadgeTitle"
+            app:buttonDisabledColor="#999999"
+            app:buttonDisabledGapColor="@color/bgContentTop"
+            android:id="@+id/btn_reset_guide"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/tim"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="right"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+
+            >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:textSize="17dp"
+                android:textAlignment="center"
+                android:text="Get Otp" />
+
+</com.brouding.blockbutton.BlockButton>
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

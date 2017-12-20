@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bgContent"
+    android:baselineAligned="false"
+    android:orientation="horizontal">
+
+    <!-- LEFT TITLE PART -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:background="@color/bgContentTop"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="20dp"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/doctor"
+            app:border_color="#FF000000"
+
+
+              />
+
+
+
+
+    </RelativeLayout>
+    <!-- RIGHT TITLE PART -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/bgTitleRight"
+        android:paddingBottom="20dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="20dp"
+        android:id="@+id/re1"
+        >
+
+
+
+        <TextView
+            android:id="@+id/title_from_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-5dp"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:singleLine="true"
+            android:text="Dr. Rahul Ghule"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_marginLeft="20dp"
+            />
+
+
+
+        <TextView
+            android:id="@+id/title_to_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_from_address"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:text="Cardiologist"
+            android:layout_marginTop="1dp"
+            android:layout_marginLeft="20dp"
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_to_address"
+            android:layout_marginTop="20dp"
+            android:id="@+id/lin"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:src="@drawable/home"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Smart Hospital"
+                android:textColor="@android:color/black"
+                android:gravity="center_vertical"
+                android:layout_gravity="center"
+                android:id="@+id/clinic"
+                />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lin"
+            android:layout_marginTop="10dp"
+            android:id="@+id/lin1"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:src="@drawable/location"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Mumbai Central"
+                android:textColor="@android:color/black"
+                android:gravity="center_vertical"
+                android:layout_gravity="center"
+                android:id="@+id/location"
+
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lin1"
+            android:layout_marginTop="10dp"
+            android:id="@+id/lin2"
+            android:orientation="horizontal"
+            >
+
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+
+                    >
+                    <ImageView
+                        android:id="@+id/im1"
+                        android:layout_width="wrap_content"
+                        android:background="@null"
+                        android:src="@drawable/experience"
+                        android:layout_gravity="center|left"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/expr"
+                        android:layout_width="wrap_content"
+                        android:textColor="#2F4F4F"
+
+                        android:layout_gravity="center|left"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content" />
+
+
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <ImageView
+                        android:id="@+id/im2"
+                        android:background="@null"
+                        android:src="@drawable/fees"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <TextView
+                        android:id="@+id/price"
+                        android:layout_width="wrap_content"
+                        android:textColor="#2F4F4F"
+
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        />
+
+                </LinearLayout>
+            </FrameLayout>
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+    </RelativeLayout>
+</LinearLayout>
